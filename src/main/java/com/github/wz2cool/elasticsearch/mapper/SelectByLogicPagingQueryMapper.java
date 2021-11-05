@@ -18,12 +18,19 @@ import org.springframework.util.CollectionUtils;
 import java.util.*;
 
 import static com.github.wz2cool.elasticsearch.helper.CommonsHelper.getPropertyInfo;
-import static com.github.wz2cool.elasticsearch.helper.CommonsHelper.getPropertyName;
 
 /**
  * @author Frank
  **/
 public interface SelectByLogicPagingQueryMapper<T> {
+
+    /**
+     * select by logic paging
+     *
+     * @param logicPagingQuery logic paging query
+     * @return logic paging result
+     */
+    LogicPagingResult<T> selectByLogicPaging(LogicPagingQuery<T> logicPagingQuery);
 
     /**
      * select by logic paging

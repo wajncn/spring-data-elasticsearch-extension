@@ -39,7 +39,7 @@ public class StudentEsDAO {
     }
 
     public LogicPagingResult<StudentES> selectByLogicPaging(LogicPagingQuery<StudentES> logicPagingQuery) {
-        return studentEsMapper.selectByLogicPaging(elasticsearchTemplate, logicPagingQuery);
+        return studentEsMapper.selectByLogicPaging(logicPagingQuery);
     }
 
     public List<StudentES> selectByDynamicQuery(DynamicQuery<StudentES> dynamicQuery) {

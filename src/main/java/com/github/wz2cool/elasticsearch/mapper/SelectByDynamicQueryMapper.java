@@ -18,6 +18,14 @@ public interface SelectByDynamicQueryMapper<T> {
     /**
      * select by dynamic query
      *
+     * @param dynamicQuery dynamic query
+     * @return query list
+     */
+    List<T> selectByDynamicQuery(DynamicQuery<T> dynamicQuery);
+
+    /**
+     * select by dynamic query
+     *
      * @param elasticsearchOperations elasticsearch operations
      * @param dynamicQuery            dynamic query
      * @return query list
